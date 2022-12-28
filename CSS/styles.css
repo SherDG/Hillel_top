@@ -1,0 +1,75 @@
+/* ul.a {
+    list-style-type: circle;
+  }
+  
+  ul.b {
+    list-style-type: square;
+  }
+  
+  ol.c {
+    list-style-type: upper-roman;
+  }
+  
+  ol.d {
+    list-style-type: lower-alpha;
+  } */
+
+/* body {
+  font: 100% Helvetica, sans-serif;
+  /* color: rgb(1, 38, 73); */
+/* color: #0000FF; */
+/* color: red; */
+/* } */
+
+/* div { */
+/* font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  /* color: red; */
+/* width: 70px; */
+/* height: 300px; */
+/* border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+} */
+/* div {
+  width: 200px;
+  /* Ширина блоку */
+  /* margin: 10px; */
+  /* Поля навколо елемента */
+  /* float: left; */
+  /* Обтікання по правому краю */
+/* } */ 
+
+OL LI {
+  font: 100% Helvetica, sans-serif, Arial;
+  /* Comment */
+  color: #d80d17;
+  border: 1px solid;
+  border-color: coral;
+
+}
+
+.text {
+  color: #000080;
+  font-size: 500%;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+}
+
+.text2 {
+  padding-left: 20px;
+}
+
+#myId {
+  color: #800011;
+  font-size: 300%;
+}
+
+.check {
+  color: #008031;
+}
+p {
+  font-weight: 300; /* Жирне зображення*/
+  line-height: 1.6; /* Міжрядковий інтервал */
+ }
