@@ -10,13 +10,15 @@ import os
 absolute_path = os.path.dirname(__file__)
 relative_path = "/"
 full_path = os.path.join(absolute_path, relative_path)
-# print(f'Path: {full_path}')
+# print(f'Path: {absolute_path}')
 # print('Path:'+ full_path)
 
 options = Options()
 options.add_argument("--no-sandbox")
 
-driver = webdriver.Chrome(service=Service(full_path+'chromedriver'), options=options)
+driver = webdriver.Chrome(service=Service(absolute_path + '/chromedriver'), options=options)
+# driver = webdriver.Chrome(service=Service(absolute_path+'\\chromedriver.exe'), options=options) #FOR WINDOWS
+# driver = webdriver.Chrome(service=Service('/home/dima/Завантаження/Hillel/chromedriver'), options=options)
 
 user = "guest"
 password = "welcome2qauto"
@@ -26,27 +28,33 @@ driver.get("https://" + user + ":" + password + "@" + "qauto2.forstudy.space/")
 time.sleep(3)  # sleep for 3 sec
 
 
-def is_element_present(self, how, what):
+def assertElementIsPresentByXPath(self, xpath, msg=None):
     try:
-        self.driver.find_element(by=how, value=what)
-    except NoSuchElementException as e:
-        return False
-    return True
+        self.browser.find_element_by_xpath(xpath)
+        self.assertTrue(True, msg)
+    except NoSuchElementException:
+        self.assertTrue(False, msg)
+
+def test_element_10_should_exists(self):
+    self.browser.get('url/to/test')
+    self.assertElementIsPresentByXPath('//a[@id=el_10]')
+
 
 
 # try:
 #     element = driver.find_element(By.ID, "contactsSection1")
+#     print("Element found")
 # except NoSuchElementException:
 #     print("No element found")
 
-element = driver.find_element(By.ID, 'contactsSection')  # this element is visible
-if element.is_displayed():
-    print("Element found")
-    not_found = True
-else:
-    print("Element not found")
-    not_found = False
-
-assert not_found
+# element = driver.find_element(By.ID, 'contactsSection')  # this element is visible
+# if element.is_displayed():
+#     print("Element found")
+#     found = True
+# else:
+#     print("Element not found")
+#     found = False
+#
+# assert found
 
 driver.close()
