@@ -2,7 +2,7 @@ import csv
 import random
 
 fieldnames = ['id', 'name', 'age', 'city']
-csvfile = open("people_1_csv.csv", "w")
+csvfile = open("people_1.csv", "w")
 
 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 writer.writeheader()

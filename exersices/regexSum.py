@@ -12,6 +12,6 @@ for line in handle:
     numInt = map(int, num)
     sumList.extend(numInt)
 sumNum = sum(sumList)
-print(f'{sumNum}')
+print(f'Sum of digits: {sumNum}')
 
 
